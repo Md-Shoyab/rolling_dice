@@ -6,7 +6,12 @@ void main() {
     const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: GradientContainer(),
+        body: GradientContainer(
+          gradientColorsList: [
+            Color(0xff8937FF),
+            Color(0xffE85BFF),
+          ],
+        ),
       ),
     ),
   );
