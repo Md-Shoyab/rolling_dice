@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rolling_dice/widgets/dice_roller.dart';
 
 const gradientBeginPosition = Alignment.topLeft;
 const gradientEndPosition = Alignment.bottomRight;
@@ -20,14 +21,8 @@ class GradientContainer extends StatelessWidget {
           colors: gradientColorsList,
         ),
       ),
-      child: Center(
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(15),
-          child: Image.asset(
-            'assets/images/dice_2.png',
-            width: 150,
-          ),
-        ),
+      child: const Center(
+        child: DiceRoller(),
       ),
     );
   }
