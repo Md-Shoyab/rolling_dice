@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rolling_dice/widgets/stylish_text.dart';
 
 const gradientBeginPosition = Alignment.topLeft;
 const gradientEndPosition = Alignment.bottomRight;
@@ -21,13 +20,15 @@ class GradientContainer extends StatelessWidget {
           colors: gradientColorsList,
         ),
       ),
-      child: const Center(
-        child: StylishText(
-          textValue: 'Hello World!',
+      child: Center(
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(15),
+          child: Image.asset(
+            'assets/images/dice_2.png',
+            width: 150,
+          ),
         ),
       ),
     );
   }
 }
-
-
