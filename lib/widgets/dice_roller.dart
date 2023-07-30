@@ -34,13 +34,22 @@ class _DiceRollerState extends State<DiceRoller> {
             width: 150,
           ),
         ),
-        const SizedBox(height: 20),
+        const SizedBox(height: 50),
         TextButton(
           onPressed: rollDice,
           style: TextButton.styleFrom(
-            foregroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(
+              horizontal: 20.0,
+              vertical: 15.0,
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(30),
+            ),
+            foregroundColor: const Color(0xff8937FF),
+            backgroundColor: Colors.white,
             textStyle: const TextStyle(
               fontSize: 28,
+              fontWeight: FontWeight.w600,
             ),
           ),
           child: const Text('Roll This Dice!'),
@@ -49,3 +58,5 @@ class _DiceRollerState extends State<DiceRoller> {
     );
   }
 }
+
+

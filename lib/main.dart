@@ -13,8 +13,8 @@ void main() {
             const BackGroundImageContainer(),
             GradientContainerWithHalfOpacity(
               gradientColors: [
-                const Color(0xff8937FF).withOpacity(0.7),
-                const Color(0xffE85BFF).withOpacity(0.7),
+                const Color(0xff8937FF).withOpacity(0.8),
+                const Color(0xffE85BFF).withOpacity(0.8),
               ],
             ),
             const SizedBoxWithUi(),
