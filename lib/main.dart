@@ -1,15 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:rolling_dice/widgets/background_image_container.dart';
+import 'package:rolling_dice/widgets/container_with_ui.dart';
 import 'package:rolling_dice/widgets/gradient_container.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: GradientContainer(
-          gradientColorsList: [
-            Color(0xff8937FF),
-            Color(0xffE85BFF),
+        body: Stack(
+          children: [
+            const BackGroundImageContainer(),
+            GradientContainerWithHalfOpacity(
+              gradientColors: [
+                const Color(0xff8937FF).withOpacity(0.7),
+                const Color(0xffE85BFF).withOpacity(0.7),
+              ],
+            ),
+            const SizedBoxWithUi(),
           ],
         ),
       ),

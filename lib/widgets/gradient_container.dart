@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:rolling_dice/widgets/dice_roller.dart';
 
-const gradientBeginPosition = Alignment.topLeft;
-const gradientEndPosition = Alignment.bottomRight;
+var gradientStartAlignment = Alignment.topLeft;
+var gradientEndAlignment = Alignment.bottomRight;
 
-class GradientContainer extends StatelessWidget {
-  final List<Color> gradientColorsList;
-  const GradientContainer({
+class GradientContainerWithHalfOpacity extends StatelessWidget {
+  final List<Color> gradientColors;
+  const GradientContainerWithHalfOpacity({
     super.key,
-    required this.gradientColorsList,
+    required this.gradientColors,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: double.infinity,
+      width: double.infinity,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          begin: gradientBeginPosition,
-          end: gradientEndPosition,
-          colors: gradientColorsList,
+          begin: gradientStartAlignment,
+          end: gradientEndAlignment,
+          colors: gradientColors,
         ),
-      ),
-      child: const Center(
-        child: DiceRoller(),
       ),
     );
   }
 }
+
+
